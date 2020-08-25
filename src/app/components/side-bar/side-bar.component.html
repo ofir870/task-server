@@ -1,0 +1,33 @@
+
+<div class="sidebar-wrapper">
+
+<!-- this is to deal wtih a dynamic arrays  
+also comment out the css atag! -->
+<!--     
+    <div
+     *ngFor= "let prop of sideBarProps " 
+    class="upper-link-wrapper"[innerHTML]= prop 
+    [ngClass]="'atag'"
+    >
+      -->
+    <div class="upper-link-wrapper">
+
+        <a routerLink="/main">
+            logo
+        </a>
+        <a routerLink="/tasklist">
+            link
+        </a>
+    </div>
+
+    <div class="bottom-link-wrapper">
+        
+        <a routerLink="/settings">
+            settings
+        </a>
+        <a href="/login">
+            logout
+        </a>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+.page-wrapper{
+min-height: 400px;
+
+    height: 100%;
+display: grid;
+grid-template-columns: 60px 2fr ;
+
+}
+
+
+
+.sidebar{
+
+    background-color: #F78F2D;
+}
+
