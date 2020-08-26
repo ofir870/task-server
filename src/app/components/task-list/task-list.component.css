@@ -18,7 +18,7 @@
 .bex-centered tr th, .bex-centered tr td {
     text-align: center}
 .bex-table td, .bex-table th, .bex-table-all td, .bex-table-all th {
-    padding: 7px 7px;
+    padding: 8px 3px;
     display: table-cell;
     text-align: left;
     vertical-align: top}
@@ -30,10 +30,15 @@
     white-space: nowrap;
     position: relative;
     font-weight: 500;
-    font-size: 14px;}
+    font-size: 16px;
+    
+}
 .bex-table tbody tr {
     position: relative;
-    border-bottom: 2px solid #ffffff;}
+    border-bottom: 2px solid #ffffff;
+    
+}
+    
 .bex-table tbody tr td {
     width: 15%;
     overflow: hidden;
@@ -58,5 +63,5 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 8px 8px;}
+    padding:8px 8px;}
     
