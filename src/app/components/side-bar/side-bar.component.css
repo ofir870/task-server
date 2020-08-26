@@ -1,29 +1,38 @@
+.logo {
+    position: absolute;
+    /*  */
+    /* padding: 15px; */
+    /* bottom: 50px; */
+    /* grid-template-rows: 1fr 20% ; */
+}
+
 .sidebar-wrapper {
     display: grid;
     padding: 15px;
-    height: 90%;
 
-    grid-template-rows: 1fr;
-    }
+    grid-template-rows: 1fr 20%;
+}
+.sidebar-links{
+    padding: 10rem 0px 0px 0px;
+}
 .bottom-link-wrapper {
     position: absolute;
     bottom: 3rem;
-    left: 10px;
-    display: grid; 
-
-    grid-template-rows: 1fr 1fr;
+    left: 15px;
+    display: grid;
+    grid-template-rows: 1fr 10%;
 }
-a{
-     text-decoration: none;
-    color: white;
-    opacity : 85% ;
-    font-size:90%;
 
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 85%;
+    font-size: 25px;
 
     padding: 6px 0px 0px 0px;
-    
+
     color: white;
-  
+
     font-family: Georgia, serif;
     text-decoration: none;
     vertical-align: middle;
@@ -31,13 +40,12 @@ a{
 a:active {
     border-top-color: #1b435e;
     background: #1b435e;
-    }
-a:hover{
+}
+a:hover {
     border-top-color: #b1b3b5;
     /* background: #252525; */
     color: #252525;
     cursor: pointer;
-
 }
 /* .atag{
      text-decoration: none;
@@ -61,7 +69,7 @@ a:hover{
 .atag:hover{
     border-top-color: #b1b3b5;
     /* background: #252525; */
-    /* color: #252525;
+/* color: #252525;
     cursor: pointer;
 
-} */ 
+} */

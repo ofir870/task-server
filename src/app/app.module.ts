@@ -11,11 +11,13 @@ import { ReadingFileJsonComponent } from './components/reading-file-json/reading
 import {Routes, RouterModule} from '@angular/router';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 const appRoutes: Routes = [
     { path: '' , component: LoginPageComponent},
     { path: 'login' , component: LoginPageComponent},
-    { path: 'main' , component: LayoutComponent},
+    { path: 'main' , component: MainComponent},
     { path: 'tasklist' , component: TaskListComponent},
     { path: 'settings' , component: SettingsPageComponent},
 ];
@@ -33,6 +35,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
+    
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

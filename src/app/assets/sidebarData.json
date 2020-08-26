@@ -1,5 +1,6 @@
 {
-    "Post": "Angular Json Files",
-    "CanEdit": true,
-    "Version": 7
+    "pathMain": "main",
+    "pathSettings":"settings",
+    "pathLogout": "logout",
+    "pathtaskList" :"tasklist" 
     }

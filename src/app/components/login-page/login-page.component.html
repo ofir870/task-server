@@ -9,14 +9,14 @@
 </head>    
 <body>    
     <!-- <img src="../../../Logo.svg" alt=""> -->
-    <form routerLink="/main">   
+    <form   routerLink="/main">   
      <h1 > Bextra manegment </h1>  
         <div class="container">   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
             <label>Password : </label>   
             <input type="password" placeholder="Enter Password" name="password" required>  
-            <button type="submit"  >Login</button>   
+            <button type="submit" (submit)="onSubmitLogin($event) " >Login</button>   
             <input type="checkbox" checked="checked"> Remember me  
 
              <a href="#">Forgot password? </a>   

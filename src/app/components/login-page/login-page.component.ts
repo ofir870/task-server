@@ -14,10 +14,10 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // onSubmitLogin(e) {
-  //   this.username = e.target[0].value
-  //   this.password = e.target[1].value
-  //   console.log(this.username , this.password)
-  //   this.router.navigate(['/main'])
-  // }
+  onSubmitLogin(e) {
+    this.username = e.target[0].value
+    this.password = e.target[1].value
+    console.log(this.username , this.password)
+    // this.router.navigate(['/main'])
+  }
 }

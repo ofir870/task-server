@@ -4,29 +4,38 @@
 <!-- this is to deal wtih a dynamic arrays  
 also comment out the css atag! -->
 <!--     
+
     <div
      *ngFor= "let prop of sideBarProps " 
     class="upper-link-wrapper"[innerHTML]= prop 
     [ngClass]="'atag'"
     >
       -->
-    <div class="upper-link-wrapper">
-
+    <div class="logo">
+ 
         <a routerLink="/main">
+           
             logo
         </a>
-        <a routerLink="/tasklist">
-            link
-        </a>
-    </div>
 
+    </div>
+    
+        <div class="sidebar-links ">
+
+            <a routerLink="/tasklist">
+                
+                <i class="fas fa-list" ></i>
+                
+            </a>
+            
+        </div>
     <div class="bottom-link-wrapper">
-        
         <a routerLink="/settings">
-            settings
+            <i class="fas fa-cog" ></i>
+      
         </a>
         <a href="/login">
-            logout
+            <i class="fas fa-sign-out-alt"></i>
         </a>
     </div>
 
