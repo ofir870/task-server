@@ -1,8 +1,63 @@
+<h3 class="title">  
+    {{pageTitle}}
+
+</h3 >  
+<!--     
+  <table class="gridList">  
+    <tr>  
+      <th>Name</th>  
+      <th>Company Domain</th>  
+      <th>Industry Sector</th>  
+      <th>City</th>  
+      <th>Country</th>  
+    </tr>  
+    <tr *ngFor="let item of taskListArray">  
+      <div class="check">
+        <div class="checkbox_box">
+            <input type="checkbox" id="demo1" hidden>
+            <label class="custom_checkbox" for="demo1">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </label>
+        </div>
+    </div>
+      <td>{{item.name}}</td>  
+      <td>{{item.companyDomain }}</td>  
+      <td>{{item.industrySector}}</td>  
+      <td>{{item.city}}</td>  
+      <td>{{item.country}}</td>  
+    </tr>  
+  </table>   -->
 
 
+<table class="bex-table">
+  <thead>
+      <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Company Domain</th>
+          <th>Industry</th>
+          <th>City</th>
+          <th>Country</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of taskListArray">  
+      <td>
 
-
-<div>
-        
-    <p>task-list works!</p>
-</div>
+        <div class="check">
+          <div class="checkbox_box">
+            <input type="checkbox" id="demo1" hidden>
+            <label class="custom_checkbox" for="demo1">
+              <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+            </label>
+          </div>
+        </div>
+      </td>
+      <td>{{item.name}}</td>  
+      <td>{{item.companyDomain }}</td>  
+      <td>{{item.industrySector}}</td>  
+      <td>{{item.city}}</td>  
+      <td>{{item.country}}</td>  
+    </tr>  
+  </tbody>
+</table>

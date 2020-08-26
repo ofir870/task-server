@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as SampleJson from "../../assets/sidebarData.json";
+import * as SampleJson from "../data/sidebarData.json";
 @Component({
   selector: 'app-reading-file-json',
   templateUrl: './reading-file-json.component.html',

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>FB-comment</title>
+    <desc>Created with Sketch.</desc>
+    <g id="FB-comment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M6.68756147,18 L6.39398705,18 L6.39398705,14.7476149 L5,14.7476149 C3.34314575,14.7476149 2,13.4044691 2,11.7476149 L2,5 C2,3.34314575 3.34314575,2 5,2 L15,2 C16.6568542,2 18,3.34314575 18,5 L18,11.7476149 C18,13.4044691 16.6568542,14.7476149 15,14.7476149 L10,14.7476149 L6.68756147,18 Z" id="Path-2" stroke="#606770"></path>
+        <rect id="bound" stroke-opacity="0" stroke="#979797" x="0.5" y="0.5" width="19" height="19"></rect>
+    </g>
+</svg>

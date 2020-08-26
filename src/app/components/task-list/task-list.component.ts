@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../../service/task.service'
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-test-page',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
+  taskListArray : any;
+  pageTitle  : String
 
-  constructor() { }
-
+ constructor(private taskService: TaskService ,private title: Title ) { }
   ngOnInit(): void {
-  }
+    this.title.setTitle("Tasks List");
+    this.pageTitle = this.title.getTitle()
+    this.taskListArray = this.taskService.get();
 
+  }
+ 
 }

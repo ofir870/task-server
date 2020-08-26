@@ -52,3 +52,11 @@ button:hover {
     padding: 25px;
     /* background-color: lightblue;   */
 }
+.login_logo img {
+  
+	width: 294px;
+	margin-bottom: 40px;
+	max-width: 100%;}
+    .login_logo {
+        text-align: center;
+    }

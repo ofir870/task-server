@@ -1,15 +1,205 @@
-.page-wrapper{
-    min-height: 400px;
+/********************** main.css *********************************/
+
+#view-tabs {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    width: 1140px;
+    margin: auto;
+}
+
+/* 
+
+@media (max-width:767px) {
+    width:100%;
+}
+
+@media (max-width:768px) and (max-width:991px) {
+    width:740px;
+}
+
+@media (max-width:992px) and (max-width:1199px) {
+    width:960px;
+} */
+
+.record-toolbar-right {
+    top: 0;
+    right: 50px;
+    position: absolute;
+}
+
+/****************** colors.css ************************/
+
+.nav-tabs-strip {
+    height: 100%;
+    background-color: transparent;
+}
+
+.view-tabs {
+    background-color: transparent;
+}
+
+.nav-tabs-strip .nav-tabs {
+    padding: 0;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: #fff;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.nav-tabs > li > a {
+    color: #33475b;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0;
+}
+
+
+/************************inspector stylesheet **********************/
+
+.nav-tabs > li > a i {
+    display: none;
+}
+
+.nav-tabs.nav-tabs-main > li i {
+    display: none;
+}
+
+.btn-group button.btn.hidden-phone.ng-scope {
+    display: none;
+}
+
+.btn-group .btn-group.delete-button {
+    display: none ;
+}
+
+.btn-group i.fa.fa-refresh {
+    display: none;
+}
+.btn-group button.btn.ng-scope {
+    padding: 0;
+}
+
+.record-toolbar li.menu.dropdown.button-menu.ng-scope.has-icon {
+    display: none;
+}
+
+.btn-group button.btn.ng-scope i.fa.fa-plus {
+    background: #f79824;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.record-toolbar-right {
+    display: none;
+}
+
+
+/***************************** Slick grid ******************************/
+
+.slick-header-column.ui-state-default {
+    height: inherit;
+    line-height: inherit;
+    padding: .75rem;
+    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+.slick-headerrow {
+    height: auto;
+    border: 0 !important;
+    border-bottom: 1px solid #cbd6e2 !important;
+    background: #f5f8fa !important;
+    background-image: none !important;
+    min-height: 40px;
+    overflow: visible !important;
     
-        height: 100%;
-    display: grid;
-    grid-template-columns: 60px auto auto;
-    
-    }
-    
-    .sidebar{
-    
-        background-color: #F78F2D;
-    }
-    
-    
+}
+
+.slickgrid_253113 .slick-headerrow-columns {
+    height: 100%;
+    background: #f5f8fa;
+    /* border-bottom: 1px solid #cbd6e2; */
+    overflow: visible !important;
+}
+
+.slick-headerrow-column {
+    height: 40px;
+    /* border: 0; */
+    border-right: 0;
+    background: #f5f5f5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* border-top: 1px solid #dee2e6; */
+    /* background: #f5f8fa !important; */
+    overflow: visible !important;
+    float: none !important;
+       min-height: 40px;
+    padding: 0.40rem !important;
+    background: #f5f8fa !important;
+    top: 0;
+}
+
+.slick-headerrow input {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: none;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    background: transparent;
+    font-size: 14px;
+    font-weight:400;
+    color: #000;
+    font-family: 'Roboto Slab', serif !important;
+}
+
+
+.btn-group button.btn {
+    padding: 0;
+}
+.btn-group button.btn i.fa.fa-chevron-left {
+    display: none;
+}
+
+.btn-group .btn i.fa.fa-chevron-right {
+    display: none;
+}
+
+.btn-group .btn i.fa.fa-file-text-o {
+    display: none;
+}
+
+.record-toolbar .dropdown a.dropdown-toggle {
+    display: none;
+}
+
+.btn-group .btn i.fa.fa-th-large {
+    font-size: 17px;
+    padding: 5px 10px;
+}
+
+.btn-group .btn i.fa.fa-list {
+    font-size: 17px;
+    color: black;
+    padding: 5px 10px;
+}
