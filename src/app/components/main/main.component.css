@@ -8,7 +8,9 @@
     width: 1140px;
     margin: auto;
 }
-
+.content{
+    /* background-color: white; */
+}
 /* 
 
 @media (max-width:767px) {
@@ -123,7 +125,7 @@
 .slick-headerrow {
     height: auto;
     border: 0 !important;
-    border-bottom: 1px solid #cbd6e2 !important;
+    /* border-bottom: 1px solid #cbd6e2 !important; */
     background: #f5f8fa !important;
     background-image: none !important;
     min-height: 40px;

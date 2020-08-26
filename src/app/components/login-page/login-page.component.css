@@ -3,9 +3,12 @@ Body {
     max-width: 50%;
     position: relative;
     left: 25%;
-    top:10%
-    /* margin-right: -50%; */
+    background-color: white;
+    margin-right: -50%;
     /* transform: translate(-50%, -50%); */
+}
+html{
+    background-color: white;
 }
 h1 {
     margin: 0;
@@ -49,7 +52,7 @@ button:hover {
 }
 
 .container {
-    padding: 25px;
+    padding: 15px;
     /* background-color: lightblue;   */
 }
 .login_logo img {

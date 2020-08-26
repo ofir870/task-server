@@ -13,10 +13,11 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
+const appRoutesAuth: Routes = [
+  { path: '' , component: LoginPageComponent},
+  { path: 'login' , component: LoginPageComponent}
+];
 const appRoutes: Routes = [
-    { path: '' , component: LoginPageComponent},
-    { path: 'login' , component: LoginPageComponent},
     { path: 'main' , component: MainComponent},
     { path: 'tasklist' , component: TaskListComponent},
     { path: 'settings' , component: SettingsPageComponent},
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FontAwesomeModule,
     
+    RouterModule.forRoot(appRoutesAuth),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
