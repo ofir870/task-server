@@ -1,15 +1,12 @@
-.page-wrapper{
-min-height: 400px;
-
+.page-wrapper {
+    min-height: 200px;
     height: 100%;
-display: grid;
-grid-column-gap:40px;
-grid-template-columns: 60px 1fr ;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: 60px 1fr;
 
 }
 
-.sidebar{
-
-    background-color: #F78F2D;
+.sidebar {
+    background-color: #f78f2d;
 }
-

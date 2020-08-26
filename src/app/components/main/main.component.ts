@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../service/task.service'
+import { TaskService } from '../../service/task.list.service'
 import { BrowserModule, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-main',

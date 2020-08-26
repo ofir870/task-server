@@ -5,7 +5,9 @@ import { TaskList } from '../model/task-list'
   providedIn: 'root'
 })
 export class TaskService {
+
   taskList: Array<TaskList> = ([  
+    
     { name: 'ofir', companyDomain: 'bextra.io', industrySector: "cars", city: 'beerot' ,country:"israel"},  
     { name: 'ofir1', companyDomain: 'bextra.io1', industrySector: "cars1", city: 'beerot1' ,country:"israel1"},  
     { name: 'ofir2', companyDomain: 'bextra.io2', industrySector: "cars2", city: 'beerot2' ,country:"israel2"},  
