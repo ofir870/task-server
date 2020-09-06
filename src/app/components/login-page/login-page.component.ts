@@ -18,6 +18,6 @@ export class LoginPageComponent implements OnInit {
     this.username = e.target[0].value
     this.password = e.target[1].value
     console.log(this.username , this.password)
-    // this.router.navigate(['/main'])
+    this.router.navigate(['/main'])
   }
 }

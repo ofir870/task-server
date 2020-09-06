@@ -39,18 +39,37 @@
     
 }
     
+.rows:hover{
+
+
+    background-color: rgb(165, 163, 163);
+    transition-property: background;
+    transition-duration:0.5s;
+    transition-timing-function: linear;  
+
+    color: white!important
+}
+tbody {
+    background-color: #F5F6F8;
+    color: #666666;
+
+}
+tbody :hover {
+      color: white!important
+    
+
+}
 .bex-table tbody tr td {
     width: 15%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     position: relative;
-    background-color: #F5F6F8;
     text-align: left;
     font-size: 13px;
     font-weight: 400;
     border-right: 1px solid #ffffff;
-    color: #666666;
+
     border-bottom: 1px solid #e6e9ef;}
 .bex-table tbody tr td:first-child {
     width: 0.01%;

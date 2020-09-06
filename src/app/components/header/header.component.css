@@ -1,0 +1,12 @@
+
+div{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    /* position: absolute; */
+    /* width: 90%; */
+    /* background-color: white!important; */
+    /* left: 68px; */
+}
+
+
+.img-fluid{ width: 25px;}

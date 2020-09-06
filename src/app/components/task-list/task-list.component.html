@@ -7,31 +7,55 @@
   <thead>
       <tr>
           <th></th>
-          <th>Name</th>
-          <th>Company Domain</th>
-          <th>Industry</th>
-          <th>City</th>
-          <th>Country</th>
+          <th>Action name</th>
+          <th>Description</th>
+          <th>Goal</th>
+          <th>Result</th>
+          <th>Trigger</th>
+          <th>Time Limit</th>
+          <th>assignment</th>
+          <th>Score</th>
+          <th>Group</th>
+          <th>Tags</th>
+          <th>Status</th>
+          <th>Roles</th>
       </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="let item of taskListArray">  
-      <td>
+  <tbody >
 
-        <div class="check">
-          <div class="checkbox_box">
-            <input type="checkbox" id="demo1" hidden>
-            <label class="custom_checkbox" for="demo1">
-              <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
-            </label>
+
+      <tr  class="rows" *ngFor="let item of taskListArray; let i = index;" (click)="onTaskClick(item, i, $event) ">  
+        <td class="rows">
+
+          <div class="check">
+            <div class="checkbox_box">
+              <input type="checkbox" id="demo1" hidden>
+              <label class="custom_checkbox" for="demo1">
+                <!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+              </label>
+            </div>
           </div>
-        </div>
-      </td>
-      <td>{{item.name}}</td>  
-      <td>{{item.companyDomain }}</td>  
-      <td>{{item.industrySector}}</td>  
-      <td>{{item.city}}</td>  
-      <td>{{item.country}}</td>  
-    </tr>  
-  </tbody>
-</table>
+        </td>
+   
+        <td>{{item.actionName}}</td>  
+        <td>{{item.description }}</td>  
+        <td>{{item.goal}}</td>  
+        <td>{{item.result}}</td>  
+        <td>{{item.trigger}}</td>  
+        <td>{{item.timeLimit}}</td>  
+        <td>{{item.assignment}}</td>  
+        <td>{{item.score}}</td>  
+        <td>{{item.group}}</td>  
+        <td>{{item.tags}}</td>  
+        <td>{{item.status}}</td>  
+        <td>{{item.roles}}</td>  
+        <td >
+          <i class="fa fa-trash fa-2x"></i>
+        </td>
+      </tr>  
+ 
+    </tbody>
+  </table>
+
+
+  <app-modal-fade-tasklist></app-modal-fade-tasklist>

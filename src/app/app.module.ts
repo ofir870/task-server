@@ -12,13 +12,21 @@ import {Routes, RouterModule} from '@angular/router';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TaskDetailsComponent } from './components/task-list/task-details/task-details.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ModalFadeTasklistComponent } from './components/modal-fade-tasklist/modal-fade-tasklist.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 const appRoutesAuth: Routes = [
   { path: '' , component: LoginPageComponent},
   { path: 'login' , component: LoginPageComponent}
 ];
 const appRoutes: Routes = [
-    { path: 'main' , component: MainComponent},
+  { path: 'main' , component: MainComponent},
+  { path: 'tasklist/taskdetails/:name' , component: TaskDetailsComponent},
+    
     { path: 'tasklist' , component: TaskListComponent},
     { path: 'settings' , component: SettingsPageComponent},
 ];
@@ -32,12 +40,17 @@ const appRoutes: Routes = [
     LoginPageComponent,
     ReadingFileJsonComponent,
     TaskListComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    TaskDetailsComponent,
+    HeaderComponent,
+    ModalFadeTasklistComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
     RouterModule.forRoot(appRoutesAuth),
     RouterModule.forRoot(appRoutes)
   ],
