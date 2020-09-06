@@ -22,9 +22,9 @@
     display: table-cell;
     text-align: left;
     vertical-align: top}
-.bex-table th:first-child, .bex-table td:first-child, .bex-table-all th:first-child, .bex-table-all td:first-child {
-  }
-.bex-table thead tr th{
+/* .bex-table th:first-child, .bex-table td:first-child, .bex-table-all th:first-child, .bex-table-all td:first-child {
+  } */
+/* .bex-table thead tr th{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -37,7 +37,7 @@
     position: relative;
     border-bottom: 2px solid #ffffff;
     
-}
+} */
     
 .rows:hover{
 
@@ -46,7 +46,6 @@
     transition-property: background;
     transition-duration:0.5s;
     transition-timing-function: linear;  
-
     color: white!important
 }
 tbody {

@@ -14,11 +14,14 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TaskDetailsComponent } from './components/task-list/task-details/task-details.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ModalFadeTasklistComponent } from './components/modal-fade-tasklist/modal-fade-tasklist.component';
+import { ModalFadeTasklistComponent } from './components/task-list/modal-fade-tasklist/modal-fade-tasklist.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MeasurementTypesComponent } from './components/measurement-types/measurement-types.component';
+import { ModalFadeMeasurementTypesComponent } from './components/measurement-types/modal-fade-measurement-types/modal-fade-measurement-types.component';
+
+
 
 const appRoutesAuth: Routes = [
   { path: '', component: LoginPageComponent },
@@ -45,7 +48,8 @@ const appRoutes: Routes = [
     TaskDetailsComponent,
     HeaderComponent,
     ModalFadeTasklistComponent,
-    MeasurementTypesComponent
+    MeasurementTypesComponent,
+    ModalFadeMeasurementTypesComponent
   ],
   imports: [
     BrowserModule,

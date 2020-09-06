@@ -18,7 +18,7 @@
 
 
       <tr  class="rows" *ngFor="let item of measurementTypesArray; let i = index;" (click)="onTaskClick(item, i, $event) ">  
-        <td class="rows">
+        <td >
 
           <div class="check">
             <div class="checkbox_box">
@@ -37,11 +37,11 @@
  
         <td >
           <i class="fa fa-trash fa-2x"></i>
-        </td>
+      
       </tr>  
  
     </tbody>
   </table>
 
 
-  <app-modal-fade-tasklist></app-modal-fade-tasklist>
+  <app-modal-fade-measurement-types></app-modal-fade-measurement-types>
