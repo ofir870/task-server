@@ -8,7 +8,7 @@
                 <h4 class="modal-title">Add Task List</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <form ng-class="{submitted:form.submitted}" novalidate ng-submit="submit(form)" name="form"
+            <form (submit)="onSubmit($event)"  name="form"
                 class="css-form">
                 <!-- Modal body -->
                 <div class="modal-body">
@@ -24,13 +24,16 @@
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <input name="taskDescription" ng-model="newTask.description" type="text" class="form-control"
-                            placeholder="Enter your task Description">
+                        <input type="text" ng-model="newTask.taskDescription" name="taskDescription" class="form-control"
+                            placeholder="Enter task description" required>
+                  
+               
                     </div>
+
                     <div class="form-group">
                         <label>Goal</label>
                         <input name="taskGoal" ng-model="newTask.goal" type="text" class="form-control"
-                            placeholder="Enter your task Goal">
+                            placeholder="Enter your task Goal" required>
                     </div>
                     <div class="form-group">
                         <label>Result</label>
@@ -43,13 +46,13 @@
                         <div class="form-group">
                             <label>Trigger</label>
                             <input name="taskTrigger" ng-model="newTask.trigger" type="text" class="form-control"
-                                placeholder="Enter your task trigger">
+                                placeholder="Enter your task trigger" required>
                         </div>
 
 
 
                         <div ng-show="form.$submitted || form.ct.$touched">
-                            <div ng-show="form.ct.$error.required" class="invalid-feedback">Please select company type
+                            <div ng-show="form.ct.$error.required" class="invalid-feedback">Please select company type 
                             </div>
                         </div>
                     </div>
@@ -61,7 +64,7 @@
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn Gray_BTN" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary Orange_BTN">Add</button>
+                    <button type="submit" class="btn btn-primary Orange_BTN" >Add</button>
                 </div>
             </form>
         </div>

@@ -54,11 +54,11 @@ tbody {
     color: #666666;
 
 }
-tbody :hover {
+/* tbody :hover {
       color: white!important
     
 
-}
+} */
 .bex-table tbody tr td {
     width: 15%;
     overflow: hidden;

@@ -1,27 +1,43 @@
-.bex-table, .bex-table-all {
+.bex-table,
+.bex-table-all {
     border-collapse: collapse;
     border-spacing: 0;
     width: 95%;
-    display: table}
+    display: table;
+}
 .bex-table-all {
-    border: 1px solid #ccc}
-.bex-bordered tr, .bex-table-all tr {
-    border-bottom: 1px solid #ddd}
+    border: 1px solid #ccc;
+}
+.bex-bordered tr,
+.bex-table-all tr {
+    border-bottom: 1px solid #ddd;
+}
 .bex-striped tbody tr:nth-child(even) {
-    background-color: #f1f1f1}
+    background-color: #f1f1f1;
+}
 .bex-table-all tr:nth-child(odd) {
-    background-color: #fff}
+    background-color: #fff;
+}
 .bex-table-all tr:nth-child(even) {
-    background-color: #f1f1f1}
-.bex-hoverable tbody tr:hover, .bex-ul.bex-hoverable li:hover {
-    background-color: #ccc}
-.bex-centered tr th, .bex-centered tr td {
-    text-align: center}
-.bex-table td, .bex-table th, .bex-table-all td, .bex-table-all th {
+    background-color: #f1f1f1;
+}
+.bex-hoverable tbody tr:hover,
+.bex-ul.bex-hoverable li:hover {
+    background-color: #ccc;
+}
+.bex-centered tr th,
+.bex-centered tr td {
+    text-align: center;
+}
+.bex-table td,
+.bex-table th,
+.bex-table-all td,
+.bex-table-all th {
     padding: 8px 3px;
     display: table-cell;
     text-align: left;
-    vertical-align: top}
+    vertical-align: top;
+}
 /* .bex-table th:first-child, .bex-table td:first-child, .bex-table-all th:first-child, .bex-table-all td:first-child {
   } */
 /* .bex-table thead tr th{
@@ -38,26 +54,25 @@
     border-bottom: 2px solid #ffffff;
     
 } */
-    
-.rows:hover{
-
-
+th {
+    padding:10px;
+}
+.rows:hover {
     background-color: rgb(165, 163, 163);
-    transition-property: background;
-    transition-duration:0.5s;
-    transition-timing-function: linear;  
-    color: white!important
+    /* transition-property: background; */
+    transition-duration: 0.7s;
+    transition-timing-function: linear;
+    color: white !important;
 }
 tbody {
-    background-color: #F5F6F8;
+    background-color: #f5f6f8;
     color: #666666;
-
 }
-tbody :hover {
+/* tbody :hover {
       color: white!important
     
 
-}
+} */
 .bex-table tbody tr td {
     width: 15%;
     overflow: hidden;
@@ -69,17 +84,20 @@ tbody :hover {
     font-weight: 400;
     border-right: 1px solid #ffffff;
 
-    border-bottom: 1px solid #e6e9ef;}
+    border-bottom: 1px solid #e6e9ef;
+}
 .bex-table tbody tr td:first-child {
     width: 0.01%;
-    background-color: #F78F2D;
-    padding: 0 0}
+    background-color: #f78f2d;
+    padding: 0 0;
+}
 .bex-table tbody tr td:first-child .groupTitle {
-    display: flex;}
+    display: flex;
+}
 .bex-table tbody tr td:first-child .groupTitle > span {
     width: 350px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding:8px 8px;}
-    
+    padding: 8px 8px;
+}

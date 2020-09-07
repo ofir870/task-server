@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.title.setTitle("main");
     this.pageTitle = this.title.getTitle()
-    this.taskListArray = this.taskService.get();
+    // this.taskListArray = this.taskService.get();
   }
 
 }

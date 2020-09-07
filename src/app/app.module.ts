@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MainComponent } from './components/main/main.component';
@@ -54,6 +54,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FontAwesomeModule,
+    HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),

@@ -8,10 +8,17 @@
   <thead>
       <tr>
           <th></th>
+
+          <th>ID</th>
           <th>Name</th>
           <th>Code</th>
-          <th>Active</th>
-          <th>Type</th>
+          <th>Is Active</th>
+          <th>Types</th>
+          <th>Updated By</th>
+          <th>Updated On</th>
+          <th>field_type</th>
+          <th>created_on</th>
+          <th>created_by</th>
       </tr>
   </thead>
   <tbody >
@@ -30,10 +37,16 @@
           </div>
         </td>
    
+        <td>{{item.id}}</td>  
         <td>{{item.name}}</td>  
         <td>{{item.code}}</td>  
-        <td>{{item.active}}</td>  
-        <td>{{item.type}}</td>  
+        <td>{{item.is_active}}</td>  
+        <td>{{item.types}}</td>  
+        <td>{{item.updated_by}}</td>  
+        <td>{{item.updated_on.toLocaleDateString()}}</td>  
+        <td>{{item.field_type}}</td>  
+        <td>{{item.created_on.toLocaleDateString()}}</td>  
+        <td>{{item.created_by}}</td>  
  
         <td >
           <i class="fa fa-trash fa-2x"></i>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MeasurementTypesService } from '../../services/measurement-types.service'
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { Router, ROUTER_CONFIGURATION, RouterLink } from '@angular/router'
+import { Observable } from 'rxjs';  
+
 
 @Component({
   selector: 'app-measurement-types',
@@ -12,13 +14,16 @@ export class MeasurementTypesComponent implements OnInit {
 
  measurementTypesArray : any;
   pageTitle  : String
+  
   constructor(private measurementType: MeasurementTypesService ,private title: Title, private router  : Router) { }
 
   ngOnInit(): void {
 
     this.title.setTitle("Measurement Types");
     this.pageTitle = this.title.getTitle()
-    this.measurementTypesArray = this.measurementType.get();
+    this.measurementType.getMeasurementTypesList().subscribe(measurementType =>console.log(measurementType))
+
+    // this.measurementTypesArray = this.measurementType.get();
   }
 onTaskClick(item ,indexOfRow ,event){
 
