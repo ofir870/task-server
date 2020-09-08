@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MeasurementTypesService } from '../../services/measurement-types.service'
+import { MeasurementTypesService } from '../../services/measurement.types.service'
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { Router, ROUTER_CONFIGURATION, RouterLink } from '@angular/router'
 

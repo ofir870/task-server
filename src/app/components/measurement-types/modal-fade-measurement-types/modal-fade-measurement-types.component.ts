@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MeasurementTypesService } from '../../../services/measurement-types.service'
+import { MeasurementTypesService } from '../../../services/measurement.types.service'
 import { MeasurementType } from '../../../models/measurement-type'
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 @Component({

@@ -1,8 +1,4 @@
-export class GoalsModel {
+export class returnType {
     
-    id:Number;
-    goal:String;
-    name:String;
-    isActive:Boolean
-    
+
 }
