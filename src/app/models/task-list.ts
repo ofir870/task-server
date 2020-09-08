@@ -1,4 +1,5 @@
 export class TaskList {
+    id:Number;
     actionName:String;
     description:string 
     goal:String;

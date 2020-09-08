@@ -13,9 +13,10 @@
 }
 
 .content{
-    /* overflow: auto; */
+    overflow: scroll;
     background-color: white;
     width: 100%;
+    
     border-radius:0.8% 0 0 0;
     padding: 10px 0 0 40px;
     

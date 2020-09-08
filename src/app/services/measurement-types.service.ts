@@ -6,14 +6,15 @@ import { Observable } from 'rxjs';
 
 
 
-const httpOptions : any    = {
+const httpOptions: any = {
   headers: new HttpHeaders()
-  .append('Content-Type', 'application/json')
-  .append('Access-Control-Allow-Headers', 'Content-Type')
-  .append('Access-Control-Allow-Methods', 'GET')
-  .append('Access-Control-Allow-Origin', 'http://localhost:8090')
-  
+    .append('Content-Type', 'application/json')
+    .append('Access-Control-Allow-Headers', 'Content-Type')
+    .append('Access-Control-Allow-Origin', '*')
+    .append('Access-Control-Allow-Methods', 'GET')
+
 };
+console.log(httpOptions)
 
 @Injectable({
   providedIn: 'root'
@@ -21,25 +22,31 @@ const httpOptions : any    = {
 export class MeasurementTypesService {
 
 
-  measurementType: Array<MeasurementType> = [  
+  measurementType: Array<MeasurementType> = [
 
     // { code:"123",created_by:"asd",created_on:new Date(),id:"12",is_active:true,types:"types",name:"asd",updated_on:new Date(),updated_by:"שדג",field_type:"שדג"},  
     // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
     // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
     // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
     // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
-  
+
+
   ]
-   
-
-  constructor( private http: HttpClient) { }
 
 
-  getMeasurementTypesList():Observable<any> {  
-    return this.http.get("http://localhost:8090/mtypes/list",httpOptions)
+  constructor(private http: HttpClient) { }
+
+
+  getMeasurementTypesList(): Observable<ArrayBuffer> {
+    return this.http.get("http://localhost:8090/mtypes/list", httpOptions)
+  }
+  getMeasurementTypesById(id): Observable<object> {
+    return this.http.get(`http://localhost:8090/mtypes/${id}`, httpOptions)
   }
 
-  get(){
-    return this.measurementType;
+  createMeasurementType(measurementType: MeasurementType): Observable<object> {
+    console.log(measurementType)
+
+    return this.http.post("http://localhost:8090/mtypes/",measurementType);
   }
 }

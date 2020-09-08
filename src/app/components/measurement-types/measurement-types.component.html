@@ -17,8 +17,8 @@
           <th>Updated By</th>
           <th>Updated On</th>
           <th>field_type</th>
-          <th>created_on</th>
-          <th>created_by</th>
+          <th>created On</th>
+          <th>created By</th>
       </tr>
   </thead>
   <tbody >
@@ -37,16 +37,16 @@
           </div>
         </td>
    
-        <td>{{item.id}}</td>  
+        <td >{{item.id}} </td>  
         <td>{{item.name}}</td>  
         <td>{{item.code}}</td>  
-        <td>{{item.is_active}}</td>  
+        <td>{{item.active}}</td>  
         <td>{{item.types}}</td>  
-        <td>{{item.updated_by}}</td>  
-        <td>{{item.updated_on.toLocaleDateString()}}</td>  
-        <td>{{item.field_type}}</td>  
-        <td>{{item.created_on.toLocaleDateString()}}</td>  
-        <td>{{item.created_by}}</td>  
+        <td>{{item.updatedBy}}</td>  
+        <td>{{item.updatedOn.slice(0,10)}}</td>  
+        <td>{{item.types}}</td>  
+        <td>{{item.createdOn.slice(0,10)}}</td>  
+        <td>{{item.createdBy}}</td>  
  
         <td >
           <i class="fa fa-trash fa-2x"></i>
