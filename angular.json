@@ -4,7 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "task-server": {
-
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -64,8 +63,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "task-server:build",
-            "port": 5000
+            "browserTarget": "task-server:build"
           },
           "configurations": {
             "production": {
