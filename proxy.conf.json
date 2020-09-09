@@ -1,0 +1,6 @@
+{
+    "/api":{
+        "target":"http://loacalhost:8090",
+        "secure": false
+    }
+}
