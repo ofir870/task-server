@@ -1,10 +1,9 @@
 
 import { MeasurementType } from '../models/measurement-type'
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
 import { MeasurementSerial } from '../services/serializer/measurement.type.serial'
 
 @Injectable({
@@ -19,17 +18,17 @@ export class MeasurementTypesService {
 
   constructor(private http: HttpClient) { }
   
-  getMeasurementTypesList(): Observable<MeasurementType> {
+  getMeasurementTypesList(): Observable<MeasurementType[]> {
     
-    return this.http.get<MeasurementType>(`${this.url}${this.endpoint}list`).pipe(map(data => this.serializer .fromJson(data)))
+    return this.http.get<MeasurementType[]>(`${this.url}${this.endpoint}list`)
   }
   getMeasurementTypesById(id: number): Observable<object> {
     return this.http.get(`${this.url}${this.endpoint}${id}`)
   }
   
   createMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {
-    return this.http.post<MeasurementType>(`${this.url}${this.endpoint}`,measurementType)
-   
+    return this.http.post<MeasurementType>(`${this.url}${this.endpoint}`,this.serializer.toJson(measurementType).pipe(map(data => this.serializer.fromJson(data))))
+
   }
   updateMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {
     return this.http

@@ -1,32 +1,36 @@
-
 <h3 class="title">  
-    {{pageTitle}}
-
+  {{pageTitle}}
+  
 </h3 >  
 
-<table class="bex-table">
-  <thead>
-      <tr>
-          <th></th>
 
-          <th>ID</th>
-          <th>Name</th>
-          <th>Code</th>
+    <div class="table-editable">
+      
+<table class="bex-table" >
+  <thead>
+    <tr>
+      <th></th>
+      
+      <th>ID</th>
+      <th>Name</th>
+      <th>Code</th>
           <th>Is Active</th>
           <th>Types</th>
-          <th>Updated By</th>
+          <th>Sort</th>
+          <th>Delete</th>
+          <!-- <th>Updated By</th>
           <th>Updated On</th>
-          <th>field_type</th>
+      
           <th>created On</th>
-          <th>created By</th>
-      </tr>
-  </thead>
-  <tbody >
+          <th>created By</th> -->
+        </tr>
+      </thead>
+      <tbody >
+        
 
-
-      <tr  class="rows" *ngFor="let item of measurementTypesArray; let i = index;" (click)="onTaskClick(item, i, $event) ">  
+        <tr  class="rows" *ngFor="let item of measurementTypesArray; let i = index;" (click)="onTaskClick(item, i, $event)  " (change)="someFun($event)">  
         <td >
-
+          
           <div class="check">
             <div class="checkbox_box">
               <input type="checkbox" id="demo1" hidden>
@@ -36,25 +40,34 @@
             </div>
           </div>
         </td>
-   
-        <td >{{item.id}} </td>  
-        <td>{{item.name}}</td>  
-        <td>{{item.code}}</td>  
-        <td>{{item.active}}</td>  
-        <td>{{item.types}}</td>  
-        <td>{{item.updatedBy}}</td>  
-        <td>{{item.updatedOn.slice(0,10)}}</td>  
-        <td>{{item.types}}</td>  
-        <td>{{item.createdOn.slice(0,10)}}</td>  
-        <td>{{item.createdBy}}</td>  
- 
+        
+        <td name="id" (focusout)="getRowData($event)" class="pt-3-half" contenteditable="true">{{item.id}} </td>  
+        <td name="name" (focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.name}}</td>  
+        <td name="code" (focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.code}}</td>  
+        <td name="active"(focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.active}}</td>  
+        <td name="types" (focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.types}}</td>  
+        <!-- <td name="updatedBy" (focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.updatedBy}}</td>  
+        <td name= "updatedOn"(focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.updatedOn.slice(0,10)}}</td>  
+        <td name="createdOn" (focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.createdOn.slice(0,10)}}</td>  
+        <td name="createdBy"(focusout)="getRowData($event)"  class="pt-3-half" contenteditable="true">{{item.createdBy}}</td>   -->
         <td >
-          <i class="fa fa-trash fa-2x"></i>
-      
-      </tr>  
+          <span class="table-up"><a href="/measurementtypes" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+            aria-hidden="true"></i></a></span>
+            <span class="table-down"><a href="/measurementtypes" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+              aria-hidden="true"></i></a></span>
+            </td>
+            <span  class="table-remove"> <i class="fa fa-trash fa-2x"></i></span>
+            
+            
+          </tr>  
+          
+        </tbody>
+      </table>
+    </div>
  
-    </tbody>
-  </table>
 
 
-  <app-modal-fade-measurement-types></app-modal-fade-measurement-types>
+<app-modal-fade-measurement-types></app-modal-fade-measurement-types>
+
+<!-----------------------------------------------------------------------------------= -->
+<!-- JQuary for table comuniction with server -->
