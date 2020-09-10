@@ -24,7 +24,7 @@ export class MeasurementTypesComponent implements OnInit {
     this.title.setTitle("Measurement Types");
     this.pageTitle = this.title.getTitle()
     this.measurementType.getMeasurementTypesList().subscribe(measurementType => {
-      console.log(measurementType[0].updatedOn.slice(0, 10))
+    
 
       this.measurementTypesArray = measurementType
       console.log(this.measurementTypesArray)

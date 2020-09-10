@@ -3,50 +3,59 @@ import { MeasurementType } from '../models/measurement-type'
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-
-
-const httpOptions: any = {
-  headers: new HttpHeaders()
-    .append('Content-Type', 'application/json')
-    .append('Access-Control-Allow-Headers', 'Content-Type')
-    .append('Access-Control-Allow-Origin', '*')
-    .append('Access-Control-Allow-Methods', 'GET')
-
-};
-console.log(httpOptions)
+import { MeasurementSerial } from '../services/serializer/measurement.type.serial'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class MeasurementTypesService {
 
-
-  measurementType: Array<MeasurementType> = [
-
-    // { code:"123",created_by:"asd",created_on:new Date(),id:"12",is_active:true,types:"types",name:"asd",updated_on:new Date(),updated_by:"שדג",field_type:"שדג"},  
-    // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
-    // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
-    // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
-    // { name: 'ofir', code: 'Details about the action ', active: true,type:"A"},  
-
-
-  ]
-
+  private url='http://localhost:8090/';
+  private endpoint = 'mtypes/';
+  private serializer = new MeasurementSerial();
 
   constructor(private http: HttpClient) { }
-
-
-  getMeasurementTypesList(): Observable<ArrayBuffer> {
-    return this.http.get("http://localhost:8090/mtypes/list", httpOptions)
+  
+  getMeasurementTypesList(): Observable<MeasurementType> {
+    
+    return this.http.get<MeasurementType>(`${this.url}${this.endpoint}list`).pipe(map(data => this.serializer .fromJson(data)))
   }
-  getMeasurementTypesById(id): Observable<object> {
-    return this.http.get(`http://localhost:8090/mtypes/${id}`, httpOptions)
+  getMeasurementTypesById(id: number): Observable<object> {
+    return this.http.get(`${this.url}${this.endpoint}${id}`)
   }
-
-  createMeasurementType(measurementType: MeasurementType): Observable<object> {
-    console.log(measurementType)
-
-    return this.http.post("http://localhost:8090/mtypes/",measurementType);
+  
+  createMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {
+    return this.http.post<MeasurementType>(`${this.url}${this.endpoint}`,measurementType)
+   
   }
+  updateMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {
+    return this.http
+    .put<MeasurementType>(`${this.url}/${this.endpoint}/${measurementType.id}`, measurementType);
+  }
+  
+  delete(id: number) {
+    return this.http
+    .delete(`${this.url}/${this.endpoint}/${id}`);
+  }
+  
+  
 }
+    // httpOptionsGet: any = {
+    //   headers: new HttpHeaders()
+    //     .append('Content-Type', 'application/json')
+    //     .append('Access-Control-Allow-Headers', 'Content-Type')
+    //     .append('Access-Control-Allow-Origin', '*')
+    //     .append('Access-Control-Allow-Methods', 'GET')
+    
+    // };
+    // httpOptionsPost: any = {
+    //   headers: new HttpHeaders()
+    //     .append('Content-Type', 'application/json')
+    //     .append('Access-Control-Allow-Headers', 'Content-Type')
+    //     .append('Access-Control-Allow-Origin', '*')
+    //     .append('Access-Control-Allow-Methods', 'Post')
+    
+    // };
