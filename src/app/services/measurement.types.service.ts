@@ -27,7 +27,7 @@ export class MeasurementTypesService {
   }
   
   createMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {
-    return this.http.post<MeasurementType>(`${this.url}${this.endpoint}`,this.serializer.toJson(measurementType).pipe(map(data => this.serializer.fromJson(data))))
+    return this.http.post<MeasurementType>(`${this.url}${this.endpoint}`,measurementType) 
 
   }
   updateMeasurementType(measurementType: MeasurementType): Observable<MeasurementType> {

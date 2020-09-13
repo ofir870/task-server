@@ -1,8 +1,8 @@
 export class MeasurementType {
     id:Number;
-    createdBy:String;
+    createdBy:Number;
     createdOn:Date;
-    updatedBy:String;
+    updatedBy:Number;
     updatedOn:Date;
     active:Boolean;
     code:String;

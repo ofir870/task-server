@@ -13,7 +13,7 @@ export class TaskListComponent implements OnInit {
   taskListArray : any;
   pageTitle  : String
   actionName : String
- constructor(private taskService: TaskService ,private title: Title, private router  : Router ) { }
+ constructor(private taskService: TaskService ,private title: Title, private router  : Router  ) { }
   ngOnInit(): void {
     this.title.setTitle("Tasks List");
     this.pageTitle = this.title.getTitle()
@@ -35,7 +35,7 @@ export class TaskListComponent implements OnInit {
 
           this.actionName = item.actionName
           this.router.navigateByUrl(`tasklist/taskdetails/${this.actionName}`)
-          console.log(this.actionName)
+         
         }
     
 

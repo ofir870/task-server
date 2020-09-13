@@ -7,24 +7,33 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   templateUrl: './modal-fade-measurement-types.component.html',
   styleUrls: ['./modal-fade-measurement-types.component.css']
 })
+
+
 export class ModalFadeMeasurementTypesComponent implements OnInit {
   
-  constructor(private mT: MeasurementTypesService) { }
+  constructor(private mTS: MeasurementTypesService  ) { }
 
-  
+  mtm: MeasurementType = 
+  {id:20, name: 'ofir', createdBy:123,createdOn:new Date(),active:true,code:"12",types:"qwe",updatedBy:123,updatedOn:new Date()} 
+
+
+
 
   ngOnInit(): void {
  
 
   }
+  
       onSubmitMeasurement(e){
         e.preventDefault()
   
         
-        this.mT.getMeasurementTypesList().subscribe(measurementType =>{
-            console.log()
+        this.mTS.createMeasurementType(this.mtm).subscribe(measurementType =>{
+            console.log(measurementType)
         })
         
+
+
       }
 
 }
